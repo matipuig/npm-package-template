@@ -1,0 +1,69 @@
+{
+  "name": "",
+  "description": "",
+  "version": "1.0.0",
+  "author": "",
+  "license": "MIT",
+  "homepage": "",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+URL GIT"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "get+URL",
+    "mail": ""
+  },
+  "scripts": {
+    "install-globals": "npm install eslint tslint prettier jest typescript sass ts-jest husky -g --save-dev && echo \"Yes. Globals are bad, but this will run in diffs OS.\"",
+    "clean": "node clean.js",
+    "lint": "eslint src -c .eslintrc.json --ext .ts --ext .tsx --ext js --ext .jsx --fix --cache",
+    "format": "prettier --write --config .prettierrc src",
+    "test": "jest --config jestconfig.json",
+    "control": "npm run lint && npm run format && npm run test",
+    "compile": "npm run clean && tsc --project tsconfig.json",
+    "build": " npm run control && npm run compile && npm audit --production  && echo \"Finished!\"",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "lodash": "4.17.19"
+  },
+  "devDependencies": {
+    "@types/node": "14.0.14",
+    "@types/jest": "^26.0.3",
+    "@types/lodash": "^4.14.157",
+    "@types/react": "16.9.41",
+    "@types/react-dom": "16.9.8",
+    "@typescript-eslint/eslint-plugin": "^3.4.0",
+    "@typescript-eslint/parser": "^3.4.0",
+    "eslint": "^7.3.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "7.20.0",
+    "husky": "4.2.5",
+    "jest": "^26.1.0",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.1.1",
+    "typescript": "3.9.5"
+  },
+  "files": [
+    "build/**/*"
+  ],
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run format"
+    }
+  }
+}
