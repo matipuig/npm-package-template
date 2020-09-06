@@ -24,7 +24,8 @@
     "format": "prettier --write --config .prettierrc src",
     "test": "jest --no-cache --config jestconfig.json",
     "control": "npm run lint && npm run format && npm run test",
-    "compile": "npm run clean && tsc --project tsconfig.json",
+    "copy-files": "copyfiles -e \"**/*.{js,ts,tsx,jsx}\" -u 1 --soft -V \"src/**/*\" build",
+    "compile": "npm run clean && tsc --project tsconfig.json && npm run copy-files",
     "build": " npm run control && npm run compile && npm audit --production  && echo \"Finished!\"",
     "prepublishOnly": "npm run build"
   },
