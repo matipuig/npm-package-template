@@ -3,7 +3,7 @@
 This is the template for node packages. 
 It has the recommended configuration for making a new node package.
 
-It's good to go. You can start including all your files in the /src directory (with index.ts as the starting point) and run "npm run build" to build them in  /build. 
+It's good to go. You can start including all your files in the /src directory (with index.ts as the starting point) and run "npm run build" to build them in /build. 
 
 # Tools:
 
@@ -38,6 +38,10 @@ VSCode plugin: [here](https://marketplace.visualstudio.com/items?itemName=esbenp
 For unit testing it uses Jest. It will look for all the files which their names finishes with ".test.ts"  in the "/tests" dir and execute them. Jest it's a very powerful tool for testing. Its configuration is set in the jestconfig.json file. You can read how to configure it [here](https://jestjs.io/docs/en/configuration). 
 
 Read the docs: [Jest docs](https://jestjs.io/).
+
+## Husky
+It uses husky to add a hook to git, so it runs eslint and prettier before commiting every time.
+
 
 **Note**: We do not use any CSS/LESS/SASS extension or linter because we do NOT recommend to use them in node packages. This is because the bundler can make it a hell to achieve. If you want to use CSS, you should use inline-style (which makes your component more easily included in other apps). If you choose to apply CSS or something like that, you might find yourself being blocked by Content Security Policies or having problems with bundlers like webpack.  
 
