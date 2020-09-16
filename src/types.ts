@@ -7,9 +7,9 @@
  *   Complext Type.
  */
 export type ComplexType = {
-  someString: string;
-  someNumber: number;
-  someDate: Date;
-  someArray: string[];
-  someObject: Record<string, string>;
+  someString?: string;
+  someNumber?: number;
+  someDate?: Date;
+  someArray?: string[];
+  someObject?: Record<string, string>;
 };
