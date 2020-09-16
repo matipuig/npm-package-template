@@ -50,14 +50,14 @@ It uses husky to add a hook to git, so it runs eslint and prettier before commit
 
 # Folder structure
 
-**Directories**:
+## Directories:
 
 - **build**: Has the compiled code and it's prepared to work. It contains the files that will be published in npmjs when you use "npm publish". This directory is removed and remade everytime you run "npm run build", so never put something that cannot be erased there.
 - **node_modules**: It's the standard node_modules folder for node JS.
 - **src**: It contains the source of the package. It's the code to be compiled when you run "npm run build".
 - **tests**: Contains all the different files what will be tested when you use "npm run test". Jest will look for all the files finishing with ".test.ts".
 
-**Files**:
+## Files:
 
 - **clean.js**: An util script used to clean build directory.
 - **.eslintrc.json**: Contains all the configuration for [eslintrc]((https://eslint.org/docs/user-guide/configuring).
@@ -68,6 +68,11 @@ It uses husky to add a hook to git, so it runs eslint and prettier before commit
 - **jestconfig.json**: Contains Jest configuration. How to configure: [jestconfig](https://jestjs.io/docs/en/configuration).
 - **package.json**: Node Package configuration. How to configure: [npm](https://docs.npmjs.com/creating-a-package-json-file).
 - **tsconfig.json**: Contains TypeScript configuration. How to configure: [tsconfig](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
+
+## Files in /src:
+
+- **index.ts**: File where the package starts. The compilation starts in this file.
+- **types.ts**: Contains complex types to be used in all the package. If types are reused in different files or are very complex, it's better to have them in a specific file and change all of them in the same place. If you don't do this, you will find copying the same Type in different files across the package.
 
 # How to use
 
