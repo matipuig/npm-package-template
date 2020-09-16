@@ -12,6 +12,7 @@
   },
   "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
+    "no-void": "error",
     "class-methods-use-this": "off", //We don't want all method to have "this".
     "no-underscore-dangle": "off", //We use "_" as privates.
     "prettier/prettier": ["error"],
