@@ -1,3 +1,22 @@
+# Index
+
+- [Index](#index)
+- [NPM Package Template](#npm-package-template)
+- [Tools:](#tools)
+  - [Typescript](#typescript)
+  - [Eslint](#eslint)
+  - [Prettier](#prettier)
+  - [Jest](#jest)
+  - [Husky](#husky)
+  - [Not on CSS/SASS/LESS](#not-on-csssassless)
+- [Folder structure](#folder-structure)
+  - [Directories:](#directories)
+  - [Files:](#files)
+  - [Files in /src:](#files-in-src)
+- [How to use](#how-to-use)
+- [Scripts](#scripts)
+- [License](#license)
+
 # NPM Package Template
 
 This is the template for node packages.
@@ -46,7 +65,9 @@ Read the docs: [Jest docs](https://jestjs.io/).
 
 It uses husky to add a hook to git, so it runs eslint and prettier before commiting every time.
 
-**Note**: We do not use any CSS/LESS/SASS extension or linter because we do NOT recommend to use them in node packages. This is because the bundler can make it hell to achieve. If you want to use CSS, you should use inline-style (which makes your component more easily included in other apps). If you choose to apply CSS or something like that, you might find yourself being blocked by Content Security Policies or having problems with bundlers like webpack.
+## Not on CSS/SASS/LESS
+
+We do not use any CSS/LESS/SASS extension or linter because we do NOT recommend to use them in node packages. This is because the bundler can make it hell to achieve. If you want to use CSS, you should use inline-style (which makes your component more easily included in other apps). If you choose to apply CSS or something like that, you might find yourself being blocked by Content Security Policies or having problems with bundlers like webpack.
 
 # Folder structure
 
@@ -85,14 +106,14 @@ It uses husky to add a hook to git, so it runs eslint and prettier before commit
 # Scripts
 
 You can use the following commands:
-| Command | Description |
+| Command                 | Description                                                                                                                      |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | npm run install-globals | Installs globally dependencies like eslint and prettier. I know globals are bad, but this way you can use the scripts in any OS. |
-| rpm run lint | Runs eslint in the /src directory. |
-| npm run format | Runs prettier in the /src directory. |
-| npm run test | Runs Jest for all the test in the /tests directory. |
-| npm run compile | Compiles all the files in the /src directory to the /build directory. Also it copies all the files. |
-| npm run build | Runs npm run lint, format, test and compile. |
+| rpm run lint            | Runs eslint in the /src directory.                                                                                               |
+| npm run format          | Runs prettier in the /src directory.                                                                                             |
+| npm run test            | Runs Jest for all the test in the /tests directory.                                                                              |
+| npm run compile         | Compiles all the files in the /src directory to the /build directory. Also it copies all the files.                              |
+| npm run build           | Runs npm run lint, format, test and compile.                                                                                     |
 
 # License
 
