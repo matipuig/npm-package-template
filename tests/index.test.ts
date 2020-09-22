@@ -3,11 +3,13 @@
  */
 import greeting from '../src';
 
-test('Testing testing', () => {
-  expect(2).toBe(2);
-});
+describe('Some unit testing...', () => {
+  test('Testing testing', () => {
+    expect(2).toBe(2);
+  });
 
-test('Testing greeting', () => {
-  const greet = greeting('tester');
-  expect(greet).toBe('Hello tester');
+  test('Testing greeting', () => {
+    const greet = greeting('tester');
+    expect(greet).toBe('Hello tester');
+  });
 });
